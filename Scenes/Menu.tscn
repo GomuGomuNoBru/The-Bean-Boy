@@ -5,11 +5,7 @@
 [ext_resource path="res://fonts/Roboto-BoldItalic.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.380392, 0.392157, 0.823529, 1 )
-border_width_left = 40
-border_width_top = 40
-border_width_right = 40
-border_width_bottom = 40
+bg_color = Color( 0, 0.00784314, 0.337255, 1 )
 border_color = Color( 0, 0.0352941, 0.709804, 1 )
 border_blend = true
 
@@ -73,12 +69,25 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -356.0
-margin_top = 119.0
-margin_right = -156.0
-margin_bottom = 239.0
+margin_left = -73.0
+margin_top = 26.0
+margin_right = 73.0
+margin_bottom = 86.0
 custom_fonts/font = SubResource( 3 )
 text = "PLAY "
+icon_align = 1
+
+[node name="LevelSelect" type="Button" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -73.0
+margin_top = 118.0
+margin_right = 73.0
+margin_bottom = 178.0
+custom_fonts/font = SubResource( 3 )
+text = "LEVELS "
 icon_align = 1
 
 [node name="EndGame" type="Button" parent="Panel"]
@@ -86,12 +95,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 226.0
-margin_top = 119.0
-margin_right = 426.0
-margin_bottom = 239.0
+margin_left = -73.0
+margin_top = 215.0
+margin_right = 73.0
+margin_bottom = 279.0
 custom_fonts/font = SubResource( 4 )
 text = "No More "
 
 [connection signal="pressed" from="Panel/PlazAgain" to="CanvasLayer" method="_on_PlazAgain_pressed"]
+[connection signal="pressed" from="Panel/LevelSelect" to="CanvasLayer" method="_on_PlazAgain_pressed"]
 [connection signal="pressed" from="Panel/EndGame" to="CanvasLayer" method="_on_EndGame_pressed"]

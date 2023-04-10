@@ -7,8 +7,8 @@ func _ready():
 	pass # Replace with function body.
 
 
-func _on_PlazAgain_pressed() -> void:
-	get_tree().change_scene("res://Scenes/Level.tscn")
+func _on_PlazAgain_pressed():
+	get_tree().change_scene("res://Scenes/Level_1.tscn")
 
 
 

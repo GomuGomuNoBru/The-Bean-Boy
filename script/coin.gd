@@ -22,3 +22,4 @@ func _on_coin_body_entered(body):
 		emit_signal("coinCollected")
 
 
+

@@ -1,3 +1,4 @@
+#speed enemy
 extends "res://script/Enemy.gd"
 
 

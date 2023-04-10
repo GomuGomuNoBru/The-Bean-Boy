@@ -25,8 +25,11 @@ func _on_coin_coinCollected():
 		emit_signal("moreEnemy")
 	if score == 20:
 		emit_signal("evenMoreEnemy")
+	if score == 30:
+		_next_level()
 
-
-
+func _next_level() -> void:
+	get_tree().change_scene("res://Scenes/Level_"+str(int(get_tree().current_scene.name)+1)+".tscn")
+	score = score - score
 
 

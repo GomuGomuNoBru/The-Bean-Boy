@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/unknown-15.png-5c1e70191a002ceacffd3234262aa19a.stex"
+path="res://.import/white_boy.png-c7c84527784b266cebb949fa1dcd504f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://unknown-15.png"
-dest_files=[ "res://.import/unknown-15.png-5c1e70191a002ceacffd3234262aa19a.stex" ]
+source_file="res://white_boy.png"
+dest_files=[ "res://.import/white_boy.png-c7c84527784b266cebb949fa1dcd504f.stex" ]
 
 [params]
 

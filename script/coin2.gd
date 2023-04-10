@@ -20,3 +20,4 @@ func _on_Label2_moreCoins():
 	var ran2 : int = rng.randf_range(rng_min, rng_max)
 	translation = Vector3(ran,1,ran2)
 
+

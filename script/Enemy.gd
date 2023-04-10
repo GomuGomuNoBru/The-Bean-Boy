@@ -1,3 +1,4 @@
+#basic enemy
 extends KinematicBody
 
 signal youDead
@@ -6,7 +7,7 @@ const WALK_SPEED = 600
 const GRAVITY = 600
 
 
-onready var player = get_node("/root/Level/Player")
+onready var player = get_node("/root/Level_"+str(int(get_tree().current_scene.name))+"/Player")
 
 
 
