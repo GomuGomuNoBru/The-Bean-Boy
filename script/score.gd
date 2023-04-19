@@ -10,11 +10,11 @@ var score := 0
 
 func _ready():
 	text = String(score)
-
+	
 
 
 func _on_coin_coinCollected():
-	score += 1
+	score += 10
 	_ready()
 	if score == 1:
 		emit_signal("enemy")
@@ -28,8 +28,10 @@ func _on_coin_coinCollected():
 	if score == 30:
 		_next_level()
 
-func _next_level() -> void:
-	get_tree().change_scene("res://Scenes/Level_"+str(int(get_tree().current_scene.name)+1)+".tscn")
-	score = score - score
+func _next_level():
+	global.unlockedLevels+=1
+	get_tree().change_scene("res://Scenes/Levels/Level_"+str(int(get_tree().current_scene.name)+1)+".tscn")
+	score =- score
+	
 
-
+	

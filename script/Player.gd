@@ -3,6 +3,8 @@ extends KinematicBody
 export var speed = 20
 export var fall_acceleration = 75
 
+
+
 var velocity = Vector3.ZERO
 
 
@@ -17,7 +19,8 @@ func _physics_process(delta):
 		direction.z += 1
 	if Input.is_action_pressed("move_forward"):
 		direction.z -= 1
-
+	if Input.is_key_pressed(KEY_ENTER):
+		get_tree().change_scene("res://Scenes/Menu.tscn")
 	if direction != Vector3.ZERO:
 		direction = direction.normalized()
 		$Pivot.look_at(translation + direction, Vector3.UP)
@@ -26,6 +29,7 @@ func _physics_process(delta):
 	velocity.z = direction.z * speed
 	velocity.y -= fall_acceleration * delta
 	velocity = move_and_slide(velocity, Vector3.UP)
+
 	
 
 

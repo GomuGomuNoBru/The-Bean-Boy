@@ -21,4 +21,3 @@ func decrease_lives(var amount : int) -> void:
 		get_tree().change_scene("res://Scenes/End.tscn")
 	yield(get_tree().create_timer(0.5), "timeout")
 	can_get_hit = true
-

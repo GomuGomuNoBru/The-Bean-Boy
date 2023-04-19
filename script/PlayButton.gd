@@ -8,10 +8,14 @@ func _ready():
 
 
 func _on_PlazAgain_pressed():
-	get_tree().change_scene("res://Scenes/Level_1.tscn")
+	get_tree().change_scene("res://Scenes/Levels/Level_"+str(global.unlockedLevels)+".tscn")
 
-
+func _on_LevelSelect_pressed():
+	get_tree().change_scene("res://Scenes/Levels.tscn")
 
 func _on_EndGame_pressed():
 	get_tree().quit()
+
+func _on_GoMenu_pressed():
+	get_tree().change_scene("res://Scenes/Menu.tscn")
 

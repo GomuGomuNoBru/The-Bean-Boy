@@ -16,7 +16,8 @@ config/icon="res://white_boy.png"
 
 [autoload]
 
-GlobalScript="*res://script/GlobalScript.gd"
+global="*res://script/GlobalScript.gd"
+Levels="*res://script/Levels.gd"
 
 [display]
 

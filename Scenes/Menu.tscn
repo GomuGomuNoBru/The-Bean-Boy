@@ -103,5 +103,5 @@ custom_fonts/font = SubResource( 4 )
 text = "No More "
 
 [connection signal="pressed" from="Panel/PlazAgain" to="CanvasLayer" method="_on_PlazAgain_pressed"]
-[connection signal="pressed" from="Panel/LevelSelect" to="CanvasLayer" method="_on_PlazAgain_pressed"]
+[connection signal="pressed" from="Panel/LevelSelect" to="CanvasLayer" method="_on_LevelSelect_pressed"]
 [connection signal="pressed" from="Panel/EndGame" to="CanvasLayer" method="_on_EndGame_pressed"]
