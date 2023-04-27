@@ -14,7 +14,7 @@ func _ready():
 
 
 func _on_coin_coinCollected():
-	score += 10
+	score += 1
 	_ready()
 	if score == 1:
 		emit_signal("enemy")

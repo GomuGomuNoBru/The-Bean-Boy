@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Assets/BeanBoy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/coin.tscn" type="PackedScene" id=2]
@@ -13,6 +13,10 @@
 [ext_resource path="res://script/Lives_count.gd" type="Script" id=11]
 [ext_resource path="res://script/Enemy3.gd" type="Script" id=12]
 [ext_resource path="res://script/Enemy2.gd" type="Script" id=13]
+[ext_resource path="res://script/speedPotion.gd" type="Script" id=14]
+[ext_resource path="res://script/healPotion.gd" type="Script" id=15]
+[ext_resource path="res://Scenes/HealPotion.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/SpeedPotion.tscn" type="PackedScene" id=17]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -65,6 +69,16 @@ script = ExtResource( 7 )
 [node name="coin3" parent="Coins" instance=ExtResource( 2 )]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -2.23517, -21.2808, -13.4734 )
 script = ExtResource( 8 )
+
+[node name="PowerUps" type="Spatial" parent="."]
+
+[node name="HealPotion" parent="PowerUps" instance=ExtResource( 16 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 14.899, 1.12793, 8.28875 )
+script = ExtResource( 15 )
+
+[node name="SpeedPotion" parent="PowerUps" instance=ExtResource( 17 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 14.8417, 0, 0 )
+script = ExtResource( 14 )
 
 [node name="Control" type="Control" parent="."]
 margin_right = 1280.0
@@ -125,6 +139,10 @@ script = ExtResource( 12 )
 [connection signal="coinCollected" from="Coins/coin2" to="Control/Coins_count" method="_on_coin_coinCollected"]
 [connection signal="body_entered" from="Coins/coin3" to="Coins/coin3" method="_on_coin_body_entered"]
 [connection signal="coinCollected" from="Coins/coin3" to="Control/Coins_count" method="_on_coin_coinCollected"]
+[connection signal="body_entered" from="PowerUps/HealPotion" to="PowerUps/HealPotion" method="_on_Potion_body_entered"]
+[connection signal="healCollected" from="PowerUps/HealPotion" to="Control/Lives_count" method="_on_Potion_healCollected"]
+[connection signal="body_entered" from="PowerUps/SpeedPotion" to="PowerUps/SpeedPotion" method="_on_SpeedPotion_body_entered"]
+[connection signal="potionCollected" from="PowerUps/SpeedPotion" to="Player" method="_on_SpeedPotion_potionCollected"]
 [connection signal="enemy" from="Control/Coins_count" to="Enemys/Enemy" method="_on_Coins_count_enemy"]
 [connection signal="evenMoreCoins" from="Control/Coins_count" to="Coins/coin3" method="_on_Label2_evenMoreCoins"]
 [connection signal="evenMoreEnemy" from="Control/Coins_count" to="Enemys/Enemy3" method="_on_Coins_count_evenMoreEnemy"]

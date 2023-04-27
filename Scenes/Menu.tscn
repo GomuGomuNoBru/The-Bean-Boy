@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://script/PlayButton.gd" type="Script" id=1]
 [ext_resource path="res://fonts/Roboto-Black.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://fonts/Roboto-BoldItalic.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/ScenesBackground/MainMenu.png" type="Texture" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0.00784314, 0.337255, 1 )
@@ -15,6 +16,10 @@ outline_size = 12
 outline_color = Color( 0.0352941, 0.337255, 0.615686, 1 )
 use_filter = true
 font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 28
+font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 31
@@ -50,15 +55,26 @@ margin_right = 640.0
 margin_bottom = 360.0
 custom_styles/panel = SubResource( 1 )
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="MainMenu" type="TextureRect" parent="Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -640.0
-margin_top = -336.0
+margin_top = -360.0
 margin_right = 640.0
-margin_bottom = -27.0
+margin_bottom = 360.0
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -653.0
+margin_top = -444.0
+margin_right = 627.0
+margin_bottom = -135.0
 custom_fonts/font = SubResource( 2 )
 text = "BEANBOY"
 align = 1
@@ -73,7 +89,7 @@ margin_left = -73.0
 margin_top = 26.0
 margin_right = 73.0
 margin_bottom = 86.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 text = "PLAY "
 icon_align = 1
 

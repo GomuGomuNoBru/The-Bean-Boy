@@ -3,8 +3,6 @@ extends KinematicBody
 export var speed = 20
 export var fall_acceleration = 75
 
-
-
 var velocity = Vector3.ZERO
 
 
@@ -30,12 +28,12 @@ func _physics_process(delta):
 	velocity.y -= fall_acceleration * delta
 	velocity = move_and_slide(velocity, Vector3.UP)
 
-	
-
-
-
-
-
-
-
+func _on_SpeedPotion_potionCollected():
+	speed = speed + 50
+	print(speed)
+	yield(get_tree().create_timer(3), "timeout")
+	speed = speed - 65
+	print(speed)
+	yield(get_tree().create_timer(1), "timeout")
+	speed = speed + 10
 

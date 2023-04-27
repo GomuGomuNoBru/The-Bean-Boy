@@ -1,7 +1,7 @@
 extends Label
 
 
-var lives := 3
+export var lives := 3
 var can_get_hit := true
 
 func _ready():
@@ -21,3 +21,11 @@ func decrease_lives(var amount : int) -> void:
 		get_tree().change_scene("res://Scenes/End.tscn")
 	yield(get_tree().create_timer(0.5), "timeout")
 	can_get_hit = true
+
+
+func _on_Potion_healCollected():
+	if lives < 3:
+		lives = lives + 1
+		_ready()
+		print(lives)
+
