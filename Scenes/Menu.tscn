@@ -35,9 +35,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -640.0
+margin_left = -638.0
 margin_top = -360.0
-margin_right = 640.0
+margin_right = 642.0
 margin_bottom = 360.0
 grow_vertical = 0
 
@@ -71,10 +71,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -653.0
-margin_top = -444.0
-margin_right = 627.0
-margin_bottom = -135.0
+margin_left = -705.0
+margin_top = -346.0
+margin_right = 567.0
+margin_bottom = -15.0
+rect_rotation = -7.30556
 custom_fonts/font = SubResource( 2 )
 text = "BEANBOY"
 align = 1
@@ -85,12 +86,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -73.0
-margin_top = 26.0
-margin_right = 73.0
-margin_bottom = 86.0
+margin_left = -483.0
+margin_top = -37.0
+margin_right = -293.0
+margin_bottom = 44.0
 custom_fonts/font = SubResource( 5 )
 text = "PLAY "
+flat = true
 icon_align = 1
 
 [node name="LevelSelect" type="Button" parent="Panel"]
@@ -98,12 +100,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -73.0
-margin_top = 118.0
-margin_right = 73.0
-margin_bottom = 178.0
+margin_left = -340.0
+margin_top = 74.0
+margin_right = -148.0
+margin_bottom = 156.0
 custom_fonts/font = SubResource( 3 )
 text = "LEVELS "
+flat = true
 icon_align = 1
 
 [node name="EndGame" type="Button" parent="Panel"]
@@ -111,12 +114,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -73.0
-margin_top = 215.0
-margin_right = 73.0
-margin_bottom = 279.0
+margin_left = -196.0
+margin_top = 189.0
+margin_right = -5.0
+margin_bottom = 270.0
 custom_fonts/font = SubResource( 4 )
 text = "No More "
+flat = true
 
 [connection signal="pressed" from="Panel/PlazAgain" to="CanvasLayer" method="_on_PlazAgain_pressed"]
 [connection signal="pressed" from="Panel/LevelSelect" to="CanvasLayer" method="_on_LevelSelect_pressed"]
