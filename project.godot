@@ -18,6 +18,7 @@ config/icon="res://white_boy.png"
 
 global="*res://script/GlobalScript.gd"
 Levels="*res://script/Levels.gd"
+BackgroundMusic="*res://Scenes/BackgroundMusic.tscn"
 
 [display]
 
@@ -28,6 +29,13 @@ window/size/resizable=false
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[importer_defaults]
+
+mp3={
+"loop": true,
+"loop_offset": 0
+}
 
 [input]
 

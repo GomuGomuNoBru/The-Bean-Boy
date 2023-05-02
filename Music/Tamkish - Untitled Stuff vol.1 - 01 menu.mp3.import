@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Tamkish - Untitled Stuff vol.1 - 01 menu.mp3-bbb8ff10b356a519088e08dffcac9c66.mp3str"
+
+[deps]
+
+source_file="res://Music/Tamkish - Untitled Stuff vol.1 - 01 menu.mp3"
+dest_files=[ "res://.import/Tamkish - Untitled Stuff vol.1 - 01 menu.mp3-bbb8ff10b356a519088e08dffcac9c66.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
