@@ -18,7 +18,8 @@ config/icon="res://white_boy.png"
 
 global="*res://script/GlobalScript.gd"
 Levels="*res://script/Levels.gd"
-BackgroundMusic="*res://Scenes/BackgroundMusic.tscn"
+MusicController="*res://autoloads/MusicController.tscn"
+LivesCount="*res://script/Lives_count.gd"
 
 [display]
 

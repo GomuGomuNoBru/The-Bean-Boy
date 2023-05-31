@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Tamkish - Untitled Stuff vol.1 - 03 level1.mp3-6128d60336277c71b653c72979fe4604.mp3str"
+
+[deps]
+
+source_file="res://Music/Tamkish - Untitled Stuff vol.1 - 03 level1.mp3"
+dest_files=[ "res://.import/Tamkish - Untitled Stuff vol.1 - 03 level1.mp3-6128d60336277c71b653c72979fe4604.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

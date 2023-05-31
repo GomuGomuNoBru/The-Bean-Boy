@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://fonts/Roboto-Black.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://fonts/Roboto-BoldItalic.ttf" type="DynamicFontData" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Assets/BeanBoy.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Assets/coin.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Assets/Death.tscn" type="PackedScene" id=13]
+[ext_resource path="res://script/Level_1.gd" type="Script" id=14]
 
 [sub_resource type="BoxShape" id=3]
 
@@ -31,7 +32,8 @@ font_data = ExtResource( 1 )
 size = 32
 font_data = ExtResource( 2 )
 
-[node name="Level_2" type="Spatial"]
+[node name="Level_3" type="Spatial"]
+script = ExtResource( 14 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
 transform = Transform( 20, 0, 0, 0, 1, 0, 0, 0, 20, 0, -1.04318, 0 )

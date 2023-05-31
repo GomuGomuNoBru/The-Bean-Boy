@@ -1,7 +1,7 @@
 extends Label
 
 
-export var lives := 3
+var lives := 2
 var can_get_hit := true
 
 func _ready():
@@ -23,9 +23,11 @@ func decrease_lives(var amount : int) -> void:
 	can_get_hit = true
 
 
-func _on_Potion_healCollected():
+func _on_HealPotion_healCollected():
 	if lives < 3:
 		lives = lives + 1
 		_ready()
 		print(lives)
+		
+
 

@@ -7,6 +7,8 @@ onready var grid = $MarginContainer/VBoxContainer/levels
 
 func _ready():
 	read_dir(dir_path)
+	
+
 
 func read_dir(path):
 	var dir = Directory.new()

@@ -5,16 +5,23 @@ signal evenMoreCoins
 signal moreEnemy
 signal evenMoreEnemy
 signal enemy
+signal goodChance
 
 var score := 0
+var chance = 0.2
 
 func _ready():
 	text = String(score)
 	
 
+func spawnChance():
+	if randf() < chance:
+		emit_signal("goodChance")
+	print(randf())
 
 func _on_coin_coinCollected():
 	score += 1
+	spawnChance()
 	_ready()
 	if score == 1:
 		emit_signal("enemy")
