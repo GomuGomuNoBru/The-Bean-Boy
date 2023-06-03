@@ -62,7 +62,7 @@ fov = 73.0
 [node name="Coins" type="Spatial" parent="."]
 
 [node name="coin" parent="Coins" instance=ExtResource( 2 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -15.3626, 1, 15.7824 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -6.59148, 0, 0 )
 
 [node name="coin2" parent="Coins" instance=ExtResource( 2 )]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -11.5112, -99.5172, 0 )
@@ -75,11 +75,11 @@ script = ExtResource( 8 )
 [node name="PowerUps" type="Spatial" parent="."]
 
 [node name="HealPotion" parent="PowerUps" instance=ExtResource( 16 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 14.899, 1.12793, 8.28875 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 14.899, -20.5963, 8.28875 )
 script = ExtResource( 15 )
 
 [node name="SpeedPotion" parent="PowerUps" instance=ExtResource( 17 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 14.8417, 0, 0 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 14.8417, -15.5918, 0 )
 script = ExtResource( 14 )
 
 [node name="Control" type="Control" parent="."]
@@ -119,7 +119,7 @@ align = 1
 script = ExtResource( 11 )
 
 [node name="Area" parent="." instance=ExtResource( 6 )]
-transform = Transform( 35, 0, 0, 0, 1, 0, 0, 0, 35, 0, -16.3151, 0 )
+transform = Transform( 50, 0, 0, 0, 1, 0, 0, 0, 50, 0, -16.3151, 0 )
 script = ExtResource( 9 )
 
 [node name="Enemys" type="Spatial" parent="."]
@@ -149,6 +149,7 @@ script = ExtResource( 12 )
 [connection signal="evenMoreCoins" from="Control/Coins_count" to="Coins/coin3" method="_on_Label2_evenMoreCoins"]
 [connection signal="evenMoreEnemy" from="Control/Coins_count" to="Enemys/Enemy3" method="_on_Coins_count_evenMoreEnemy"]
 [connection signal="goodChance" from="Control/Coins_count" to="PowerUps/HealPotion" method="_on_Coins_count_goodChance"]
+[connection signal="goodChanceSpeed" from="Control/Coins_count" to="PowerUps/SpeedPotion" method="_on_Coins_count_goodChanceSpeed"]
 [connection signal="moreCoins" from="Control/Coins_count" to="Coins/coin2" method="_on_Label2_moreCoins"]
 [connection signal="moreEnemy" from="Control/Coins_count" to="Enemys/Enemy2" method="_on_Coins_count_moreEnemy"]
 [connection signal="body_entered" from="Area" to="Area" method="_on_Area_body_entered"]

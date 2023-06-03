@@ -13,7 +13,7 @@ func _physics_process(delta):
 func _on_HealPotion_body_entered(body):
 	if body.name == "Player":
 		emit_signal("healCollected")
-	self.queue_free()
+		self.queue_free()
 
 
 func _on_Coins_count_goodChance():

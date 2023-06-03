@@ -14,7 +14,8 @@ func _physics_process(delta):
 func _on_SpeedPotion_body_entered(body):
 	if body.name == "Player":
 		emit_signal("potionCollected")
-	self.queue_free()
+		self.queue_free()
 
 
-
+func _on_Coins_count_goodChanceSpeed():
+	translation = Vector3(1, 1, 1)

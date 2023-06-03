@@ -29,7 +29,7 @@ extents = Vector3( 0.496608, 0.402075, 1 )
 [sub_resource type="BoxShape" id=4]
 extents = Vector3( 0.258339, 0.249584, 0.56356 )
 
-[node name="Spatial" type="KinematicBody"]
+[node name="Enemy" type="KinematicBody"]
 script = ExtResource( 1 )
 
 [node name="Goblin" type="MeshInstance" parent="."]
