@@ -1,6 +1,8 @@
 extends CanvasLayer
 
 
+onready var globalScript = get_node("/root/global")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -10,6 +12,7 @@ func _ready():
 
 func _on_PlazAgain_pressed():
 	get_tree().change_scene("res://Scenes/Levels/Level_"+str(global.unlockedLevels)+".tscn")
+	
 
 func _on_LevelSelect_pressed():
 	get_tree().change_scene("res://Scenes/Levels.tscn")
@@ -19,4 +22,8 @@ func _on_EndGame_pressed():
 
 func _on_GoMenu_pressed():
 	get_tree().change_scene("res://Scenes/Menu.tscn")
+
+
+func _on_GameMods_pressed():
+	get_tree().change_scene("res://Scenes/Mods.tscn")
 

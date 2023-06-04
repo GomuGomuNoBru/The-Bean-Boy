@@ -8,7 +8,6 @@ var velocity = Vector3.ZERO
 onready var anim = $"3DGodotRobot/AnimationPlayer"
 onready var playerModel = $PlayerModel
 
-
 func _physics_process(delta):
 	var direction = Vector3.ZERO
 
@@ -49,4 +48,3 @@ func _on_SpeedPotion_potionCollected():
 	print(speed)
 	yield(get_tree().create_timer(1), "timeout")
 	speed = speed + 10
-

@@ -3,6 +3,7 @@ extends Label
 
 var lives := 2
 var can_get_hit := true
+onready var globalScript = get_node("/root/global")
 
 func _ready():
 	text = String(lives)

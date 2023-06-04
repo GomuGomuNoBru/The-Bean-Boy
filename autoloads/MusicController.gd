@@ -28,7 +28,7 @@ func playSceneMusic(sceneName: String):
 		"Level_3":
 			$Music.stream = level3Music
 
-	$Music.volume_db = -20
+	$Music.volume_db = -50
 	$Music.play()
 
 

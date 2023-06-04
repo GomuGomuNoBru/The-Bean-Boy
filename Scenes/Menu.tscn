@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://script/PlayButton.gd" type="Script" id=1]
 [ext_resource path="res://fonts/Roboto-Black.ttf" type="DynamicFontData" id=2]
@@ -28,6 +28,10 @@ font_data = ExtResource( 2 )
 [sub_resource type="DynamicFont" id=4]
 size = 31
 use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 31
 font_data = ExtResource( 2 )
 
 [node name="Menu" type="Control"]
@@ -132,6 +136,16 @@ margin_top = -110.0
 margin_right = 523.0
 margin_bottom = 256.0
 
+[node name="GameMods" type="Button" parent="Panel"]
+margin_left = 159.0
+margin_top = 548.0
+margin_right = 349.0
+margin_bottom = 627.0
+custom_fonts/font = SubResource( 6 )
+text = "Game Mods"
+flat = true
+
 [connection signal="pressed" from="Panel/PlazAgain" to="CanvasLayer" method="_on_PlazAgain_pressed"]
 [connection signal="pressed" from="Panel/LevelSelect" to="CanvasLayer" method="_on_LevelSelect_pressed"]
 [connection signal="pressed" from="Panel/EndGame" to="CanvasLayer" method="_on_EndGame_pressed"]
+[connection signal="pressed" from="Panel/GameMods" to="CanvasLayer" method="_on_GameMods_pressed"]
