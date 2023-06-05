@@ -48,3 +48,6 @@ func _on_SpeedPotion_potionCollected():
 	print(speed)
 	yield(get_tree().create_timer(1), "timeout")
 	speed = speed + 10
+
+
+

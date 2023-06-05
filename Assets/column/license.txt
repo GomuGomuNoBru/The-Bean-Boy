@@ -1,0 +1,11 @@
+Model Information:
+* title:	column
+* source:	https://sketchfab.com/3d-models/column-02c01bd1f280455fa58e90e6143e36d1
+* author:	Marco Fischer (https://sketchfab.com/a2e)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "column" (https://sketchfab.com/3d-models/column-02c01bd1f280455fa58e90e6143e36d1) by Marco Fischer (https://sketchfab.com/a2e) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

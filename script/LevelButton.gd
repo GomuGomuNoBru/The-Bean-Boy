@@ -2,6 +2,7 @@ extends Button
 
 
 export(String, FILE) var level_path
+onready var globalScript = get_node("/root/global")
 
 var original_size = rect_scale
 var grow_size = Vector2(1.1, 1.1)
