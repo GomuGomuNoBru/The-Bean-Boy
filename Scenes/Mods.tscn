@@ -49,18 +49,22 @@ margin_bottom = 150.0
 columns = 4
 
 [node name="Falling" parent="MarginContainer/VBoxContainer/mods" instance=ExtResource( 4 )]
+text = "Falling blocks"
 
 [node name="Mystery" parent="MarginContainer/VBoxContainer/mods" instance=ExtResource( 4 )]
 margin_left = 204.0
 margin_right = 404.0
+text = "Mystery (not done)"
 
 [node name="Survive" parent="MarginContainer/VBoxContainer/mods" instance=ExtResource( 4 )]
 margin_left = 408.0
 margin_right = 608.0
+text = "Survive"
 
 [node name="TimeSurvive" parent="MarginContainer/VBoxContainer/mods" instance=ExtResource( 4 )]
 margin_left = 612.0
 margin_right = 812.0
+text = "Time Survive  (not done)"
 
 [node name="Button" type="Button" parent="."]
 margin_left = 20.0

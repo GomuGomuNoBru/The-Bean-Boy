@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Tamkish - Untitled Stuff vol.1 - 06 battle.mp3-42aa9e70f5416f78af5bc10f207a86fe.mp3str"
+
+[deps]
+
+source_file="res://Music/Tamkish - Untitled Stuff vol.1 - 06 battle.mp3"
+dest_files=[ "res://.import/Tamkish - Untitled Stuff vol.1 - 06 battle.mp3-42aa9e70f5416f78af5bc10f207a86fe.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

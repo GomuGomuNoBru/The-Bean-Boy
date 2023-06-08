@@ -1,15 +1,16 @@
+#Levels
 extends Control
-
+#variables
 const LevelButton = preload("res://Scenes/LevelButton.tscn")
 export(String, DIR) var dir_path = ""
-
 onready var grid = $MarginContainer/VBoxContainer/levels
 
+#takes levels path
 func _ready():
 	read_dir(dir_path)
 	
 
-
+#stuff
 func read_dir(path):
 	var dir = Directory.new()
 	if dir.open(path) == OK:
@@ -23,7 +24,7 @@ func read_dir(path):
 	else:
 		print("An error occurred when trying to access the path.")
 		
-		
+#creats level button
 func create_level_btn(lvl_path, lvl_name):
 	var btn = LevelButton.instance()
 	btn.text = lvl_name.trim_suffix('.tscn').replace('_', " ")
@@ -35,7 +36,7 @@ func create_level_btn(lvl_path, lvl_name):
 	grid.add_child(btn)
 	
 		
-
+#go back button
 func _on_Button_Go_Back_pressed():
 	get_tree().change_scene("res://Scenes/Menu.tscn")
 	

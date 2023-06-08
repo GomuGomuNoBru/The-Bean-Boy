@@ -1,10 +1,13 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://script/Lives_count.gd" type="Script" id=1]
 [ext_resource path="res://Assets/coin.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/BeanBoy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Death.tscn" type="PackedScene" id=4]
 [ext_resource path="res://script/Mods/Survive.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Enemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://script/EnemySpawn.gd" type="Script" id=7]
+[ext_resource path="res://script/Enemys_Waves.gd" type="Script" id=8]
 [ext_resource path="res://script/score.gd" type="Script" id=9]
 [ext_resource path="res://script/Death.gd" type="Script" id=13]
 [ext_resource path="res://fonts/Roboto-BoldItalic.ttf" type="DynamicFontData" id=20]
@@ -99,5 +102,30 @@ script = ExtResource( 13 )
 
 [node name="Enemys" type="Spatial" parent="."]
 
+[node name="Enemy" parent="Enemys" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.47755, 0, 0 )
+
+[node name="EnemySpawn" type="Spatial" parent="."]
+script = ExtResource( 7 )
+Enemy = ExtResource( 6 )
+
+[node name="Timer" type="Timer" parent="EnemySpawn"]
+
+[node name="Waves" type="Node" parent="EnemySpawn"]
+
+[node name="Wave1" type="Node" parent="EnemySpawn/Waves"]
+script = ExtResource( 8 )
+
+[node name="Wave2" type="Node" parent="EnemySpawn/Waves"]
+script = ExtResource( 8 )
+num_of_enemys = 10
+
+[node name="Wave3" type="Node" parent="EnemySpawn/Waves"]
+script = ExtResource( 8 )
+num_of_enemys = 50
+sec_between_spawns = 1
+
 [connection signal="body_entered" from="Coins/coin" to="Coins/coin" method="_on_coin_body_entered"]
 [connection signal="body_entered" from="Area" to="Area" method="_on_Area_body_entered"]
+[connection signal="youDead" from="Enemys/Enemy" to="Control/Lives_count" method="_on_Enemy_youDead"]
+[connection signal="timeout" from="EnemySpawn/Timer" to="EnemySpawn" method="_on_Timer_timeout"]

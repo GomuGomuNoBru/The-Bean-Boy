@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/BrandonMorris-LoadingScreenLoop-cc0-qmix.mp3-841c9c87adf34582b0a9147b2061b246.mp3str"
+
+[deps]
+
+source_file="res://Assets/music/BrandonMorris-LoadingScreenLoop-cc0-qmix.mp3"
+dest_files=[ "res://.import/BrandonMorris-LoadingScreenLoop-cc0-qmix.mp3-841c9c87adf34582b0a9147b2061b246.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

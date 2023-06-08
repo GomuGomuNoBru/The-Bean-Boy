@@ -1,5 +1,6 @@
+#score
 extends Label
-
+#signals
 signal moreCoins
 signal evenMoreCoins
 signal moreEnemy
@@ -8,15 +9,17 @@ signal enemy
 signal goodChance
 signal goodChanceSpeed
 
-
+#variables
 var score := 0
 var chanceHeal = 0.1
 var chanceSpeed = 0.3
 
+onready var gun = $Player/GunController
+#score as text to display
 func _ready():
 	text = String(score)
 	
-
+#spawn chance for heal/speed potion
 func spawnChance():
 	if randf() < chanceHeal:
 		emit_signal("goodChance")
@@ -24,6 +27,7 @@ func spawnChance():
 		emit_signal("goodChanceSpeed")
 	print(randf())
 
+#when coin is collecte stuff happens
 func _on_coin_coinCollected():
 	score += 1
 	spawnChance()
@@ -40,6 +44,7 @@ func _on_coin_coinCollected():
 	if score == 30:
 		_next_level()
 
+#goes to next leve or to win scene
 func _next_level():
 	var currentScene = get_tree().current_scene.name
 	print(currentScene)
@@ -49,6 +54,6 @@ func _next_level():
 		global.unlockedLevels+=1
 		get_tree().change_scene("res://Scenes/Levels/Level_"+str(int(get_tree().current_scene.name)+1)+".tscn")
 		score =- score
-	
 
-	
+
+
