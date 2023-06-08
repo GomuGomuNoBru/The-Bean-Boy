@@ -6,7 +6,7 @@ extends Area
 
 #when players enters it sends him to End scene
 func _on_Area_body_entered(body):
-	if body.name == "Player":
+	if body.name == "Player" || "BeanBoy":
 		get_tree().change_scene("res://Scenes/End.tscn")
 
 

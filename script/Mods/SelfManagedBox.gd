@@ -56,7 +56,7 @@ func _ready():
 	timer.start()
 	
 
-#reset position of blocks
+#reset position of blocks 
 func reset_position():
 	translation.y = 20
 	translation.x = randf() * 60 - 30
